@@ -5,5 +5,4 @@ from .start import m_id
 async def (_, q: CBQ):
     if q.data == "OWN_API":
         await q.answer("Pyrogram string generation", show_alert=True)
-        
-        
+        await _.send_message(
