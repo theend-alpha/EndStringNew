@@ -1,4 +1,4 @@
-from . import Client, filters, Message
+from . import Client, filters, Message, start_markup, IKM
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(_, m):
@@ -8,4 +8,4 @@ async def start(_, m):
 You can procees with bot's api values if you want , else you can proceed with your api values
 
 
-Press Button to start generating session!""")
+Press Button to start generating session!""", reply_markup=IKM(start_markup))
